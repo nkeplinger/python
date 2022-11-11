@@ -2,11 +2,8 @@ import os
 import csv
 import sys
 
-
-
 monthlist =[]
 profitlist = []
-
 '''Part 1'''
 csvPyBankpath = os.path.join('PyBank','Resources','budget_data.csv')
 with open(csvPyBankpath) as csvPyBankfile:
@@ -68,13 +65,8 @@ with open(csvPyBankpath) as csvPyBankfile:
     greatest_increase_value = change[indexmax]
     greatest_decrease_value = change[indexmin]
 
-print(' Financial Analysis \n ---------------------------- \n Total Months: {} \n Total: ${} \n Average Change: ${} \n Greates Increase in Profits: {} ({}) \n Greates Increase in Profits: {} ({})'.format(num_of_months,total_profit,mean_profit,greatest_increase_month,greatest_increase_value,greatest_decrease_month,greatest_decrease_value))
-#output_path = os.path.join("PyBank", "Resources", "PyBank_output.txt")
-#csvwriter = csv.writer(output_file)
+print(' Financial Analysis \n ---------------------------- \n Total Months: {} \n Total: ${} \n Average Change: ${} \n Greates Increase in Profits: {} ({}) \n Greates Decrease in Profits: {} ({})'.format(num_of_months,total_profit,mean_profit,greatest_increase_month,greatest_increase_value,greatest_decrease_month,greatest_decrease_value))
 
-
-#TODO ask for help onwriting to csv file
-'''Cannot figure out how to write to csv'''
-#with open(output_path, 'w') as csvOUTfile:
- #   # Initialize csv.writer
-  ## csvwriter.writerow(' Financial Analysis \n ---------------------------- \n Total Months: {} \n Total: ${} \n Average Change: ${} \n Greates Increase in Profits: {} ({}) \n Greates Increase in Profits: {} ({})'.format(num_of_months,total_profit,mean_profit,greatest_increase_month,greatest_increase_value,greatest_decrease_month,greatest_decrease_value))
+#lines = [' Financial Analysis', '----------------------------','Total Months: {}'format(num_of_months),' Total: ${}'.format(total_profit),'Average Change: ${} '.format(mean_profit),'Greates Increase in Profits: {} ({}) '.format(greatest_increase_month,greatest_increase_value),'Greates Decrease in Profits: {} ({})'.format(greatest_decrease_month,greatest_decrease_value)]
+#with open('OUTPUT_PyBANK.txt', 'w') as f:
+#    f.writelines(lines)
